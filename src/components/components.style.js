@@ -43,14 +43,12 @@ export const ButtonStyle = styled.button`
         border-color: var(--clr--selected-btn-bg);
         border-color: var(--clr-selected-btn-bg);
       }
-    `}
-
-  @media only screen and (max-width: 600px) {
+    `}@media only screen and (max-width: 600px) {
     font-size: 0.8rem;
-    width: fit-content;
+    width: 100%;
     padding: 0.5rem;
     border-radius: 13px;
-    margin: 10px 1px;
+    margin: 0.7rem 1px;
   }
 `;
 
@@ -114,7 +112,6 @@ export const ButtonsContainerStyle = styled.div`
     content: "";
     display: block;
     width: 3px;
-    height: 20px;
     background-color: var(--clr-purple);
     position: absolute;
     left: 50%;
@@ -125,17 +122,22 @@ export const ButtonsContainerStyle = styled.div`
   }
 
   @media only screen and (max-width: 600px) {
-    top: 100%;
+    .buttons {
+      width: 100px;
+      /* height: 250px; */
+    }
+    .close-btn {
+      width: 10px;
+      height: 20px;
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
     left: 0;
-    width: 100%;
-    height: fit-content;
-    transform: translate(0, -140%);
-    flex-direction: row;
-    justify-content: center;
-    height: fit-content;
     margin-left: 0;
     ::before {
-      display: none;
+      height: 65%;
     }
   }
 `;
