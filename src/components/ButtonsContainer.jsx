@@ -1,18 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "./Button";
 import { ButtonsContainerStyle } from "./components.style";
 
 function ButtonsContainer({ buttons, selectedBtnId, setSelectedBtnid }) {
+  const [collapsed, setCollapsed] = useState(false);
   return (
-    <ButtonsContainerStyle>
-      {buttons.map((button) => (
-        <Button
-          text={button.title}
-          selected={selectedBtnId == button.id}
-          onClick={() => setSelectedBtnid(button.id)}
-          key={button.id}
-        />
-      ))}
+    <ButtonsContainerStyle collapsed={collapsed}>
+      <div className="close-btn" onClick={() => setCollapsed((old) => !old)}>
+        <img src={`${process.env.PUBLIC_URL}/up-arrow.svg`} />
+      </div>
+      <div className="buttons">
+        {buttons.map((button) => (
+          <Button
+            text={button.title}
+            selected={selectedBtnId == button.id}
+            onClick={() => setSelectedBtnid(button.id)}
+            key={button.id}
+          />
+        ))}
+      </div>
     </ButtonsContainerStyle>
   );
 }

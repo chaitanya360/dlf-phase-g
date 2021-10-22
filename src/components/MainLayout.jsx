@@ -29,6 +29,11 @@ const data = [
     title: "PLAN E",
     src: "https://www.vectary.com/viewer/v1/?model=e4b996d1-acdd-4d8a-8ec8-04ee0fdb0deb&env=studio3",
   },
+  {
+    id: 6,
+    title: "PLAN F",
+    src: "https://www.vectary.com/viewer/v1/?model=e0b61a5e-0d87-403a-a8fa-3f9bcd857885&env=studio3",
+  },
 ];
 
 function MainLayout(props) {

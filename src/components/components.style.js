@@ -20,26 +20,30 @@ export const HeaderStyle = styled.header`
 export const ButtonStyle = styled.button`
   background-color: white;
   padding: 10px 15px;
-  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.363);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.363);
   font-weight: 600;
   color: var(--font-medium);
   cursor: pointer !important;
   width: 100%;
-  margin: 10px;
+  margin: 10px 0;
   font-size: 1.1rem;
   border-radius: 18px;
   z-index: 2;
+
+  :hover {
+    border-color: dodgerblue;
+  }
 
   ${(props) =>
     props.selected &&
     css`
       background-color: var(--clr-selected-btn-bg);
       color: white;
+      :hover {
+        border-color: var(--clr--selected-btn-bg);
+        border-color: var(--clr-selected-btn-bg);
+      }
     `}
-
-  :hover {
-    border-color: var(--clr-selected-btn-bg);
-  }
 
   @media only screen and (max-width: 600px) {
     font-size: 0.8rem;
@@ -53,19 +57,58 @@ export const ButtonStyle = styled.button`
 export const ButtonsContainerStyle = styled.div`
   position: absolute;
   z-index: 2;
-  left: 0;
-  top: 50%;
+  left: 10px;
+  top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  max-width: fit-content;
-  padding: 5px 0px;
-  padding-bottom: 10px;
-  justify-content: space-between;
   text-align: center;
-  margin-left: 2rem;
-  transform: translateY(-50%);
+
+  .close-btn {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 2px solid black;
+    padding: 0.2rem 1rem;
+    border-radius: 65px;
+    font-weight: 600;
+    z-index: 3;
+    cursor: pointer;
+    img {
+      transition: transform linear 300ms;
+      width: 30px;
+      height: 30px;
+    }
+
+    :hover {
+      border-color: purple;
+    }
+  }
+
+  .buttons {
+    z-index: 4;
+    width: 180px;
+    height: 400px;
+    transition: height linear 500ms;
+    overflow: hidden;
+  }
+
+  ${(props) =>
+    props.collapsed &&
+    css`
+      .close-btn {
+        img {
+          transform: rotate(180deg);
+        }
+      }
+      .buttons {
+        height: 0;
+        z-index: 4;
+      }
+    `}
 
   ::before {
     content: "";
@@ -78,7 +121,7 @@ export const ButtonsContainerStyle = styled.div`
     top: 50%;
     transform: translate(-50%, -50%);
     height: 80%;
-    z-index: 0;
+    z-index: -1;
   }
 
   @media only screen and (max-width: 600px) {
