@@ -89,7 +89,7 @@ export const ButtonsContainerStyle = styled.div`
   .buttons {
     z-index: 4;
     width: 180px;
-    height: 400px;
+    height: 550px;
     transition: height linear 500ms;
     overflow: hidden;
   }

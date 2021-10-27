@@ -34,6 +34,16 @@ const data = [
     title: "PLAN F",
     src: "https://www.vectary.com/viewer/v1/?model=e0b61a5e-0d87-403a-a8fa-3f9bcd857885&env=studio3",
   },
+  {
+    id: 7,
+    title: "Masterplan",
+    src: false,
+  },
+  {
+    id: 8,
+    title: "Virtual Tour",
+    src: false,
+  },
 ];
 
 function MainLayout(props) {

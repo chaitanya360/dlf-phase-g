@@ -13,8 +13,10 @@ function ButtonsContainer({ buttons, selectedBtnId, setSelectedBtnid }) {
         {buttons.map((button) => (
           <Button
             text={button.title}
-            selected={selectedBtnId == button.id}
-            onClick={() => setSelectedBtnid(button.id)}
+            selected={selectedBtnId === button.id}
+            onClick={() => {
+              if (button.src) setSelectedBtnid(button.id);
+            }}
             key={button.id}
           />
         ))}
