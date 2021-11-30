@@ -42,7 +42,7 @@ const data = [
   {
     id: 8,
     title: "Virtual Tour",
-    src: false,
+    src: "https://tours.bluetickvr.com/Dlf_3rd%20Option/",
   },
 ];
 

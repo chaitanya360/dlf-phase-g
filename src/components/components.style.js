@@ -6,13 +6,13 @@ export const HeaderStyle = styled.header`
   text-align: center;
   color: rgb(56, 55, 55);
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 500;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.486);
-  padding: 1rem 0;
+  padding: 0.5rem 0;
 
   @media only screen and (max-width: 600px) {
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: 0.5rem;
   }
 `;
