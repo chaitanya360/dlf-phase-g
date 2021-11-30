@@ -37,7 +37,7 @@ const data = [
   {
     id: 7,
     title: "Masterplan",
-    src: false,
+    src: "plan",
   },
   {
     id: 8,

@@ -151,4 +151,10 @@ export const MainLayoutStyle = styled.section`
 export const ModelViewerStyle = styled.section`
   width: 100%;
   height: 100%;
+
+  img {
+    object-fit: contain;
+    width: 100vw;
+    height: 90vh;
+  }
 `;
