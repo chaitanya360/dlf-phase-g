@@ -12,6 +12,7 @@ function ButtonsContainer({ buttons, selectedBtnId, setSelectedBtnid }) {
       <div className="buttons">
         {buttons.map((button) => (
           <Button
+            area={button.area}
             text={button.title}
             selected={selectedBtnId === button.id}
             onClick={() => {

@@ -1,7 +1,7 @@
 :root {
   --font-medium: #2c3233;
   --clr-purple: #4b0188;
-  --clr-purple-faded: #4b0188b7;
+  --clr-purple-faded: #f2eafa;
   --clr-selected-btn-bg: var(--clr-purple);
 }
 

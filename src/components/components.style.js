@@ -19,19 +19,25 @@ export const HeaderStyle = styled.header`
 
 export const ButtonStyle = styled.button`
   background-color: white;
-  padding: 10px 15px;
+  padding: 10px 5px;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.363);
   font-weight: 600;
   color: var(--font-medium);
   cursor: pointer !important;
   width: 100%;
   margin: 10px 0;
-  font-size: 1.1rem;
+  font-size: 1rem;
   border-radius: 18px;
   z-index: 2;
 
+  .area {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
   :hover {
-    border-color: dodgerblue;
+    background-color: var(--clr-purple-faded);
   }
 
   ${(props) =>
@@ -40,8 +46,7 @@ export const ButtonStyle = styled.button`
       background-color: var(--clr-selected-btn-bg);
       color: white;
       :hover {
-        border-color: var(--clr--selected-btn-bg);
-        border-color: var(--clr-selected-btn-bg);
+        background-color: var(--clr-selected-btn-bg);
       }
     `}@media only screen and (max-width: 600px) {
     font-size: 0.8rem;
@@ -56,7 +61,7 @@ export const ButtonsContainerStyle = styled.div`
   position: absolute;
   z-index: 2;
   left: 10px;
-  top: 10px;
+  top: -45px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -89,7 +94,7 @@ export const ButtonsContainerStyle = styled.div`
   .buttons {
     z-index: 4;
     width: 180px;
-    height: 550px;
+    height: 650px;
     transition: height linear 500ms;
     overflow: hidden;
   }
