@@ -62,7 +62,9 @@ function MainLayout(props) {
         selectedBtnId={selectedBtnId}
         setSelectedBtnid={setSelectedBtnid}
       />
-      <ModelViewer src={data.find((item) => item.id == selectedBtnId).src} />
+      <ModelViewer
+        selectedItem={data.find((item) => item.id == selectedBtnId)}
+      />
     </MainLayoutStyle>
   );
 }

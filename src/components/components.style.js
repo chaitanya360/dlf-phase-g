@@ -22,7 +22,7 @@ export const ButtonStyle = styled.button`
   padding: 10px 5px;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.363);
   font-weight: 600;
-  color: var(--font-medium);
+  color: purple;
   cursor: pointer !important;
   width: 100%;
   margin: 10px 0;
@@ -31,6 +31,7 @@ export const ButtonStyle = styled.button`
   z-index: 2;
 
   .area {
+    color: var(--font-medium);
     margin-top: 5px;
     font-size: 0.9rem;
     font-weight: 500;
@@ -45,6 +46,10 @@ export const ButtonStyle = styled.button`
     css`
       background-color: var(--clr-selected-btn-bg);
       color: white;
+
+      .area {
+        color: white;
+      }
       :hover {
         background-color: var(--clr-selected-btn-bg);
       }
@@ -66,6 +71,10 @@ export const ButtonsContainerStyle = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
+
+  @media only screen and (max-width: 600px) {
+    top: -10px;
+  }
 
   .close-btn {
     width: 30px;
@@ -128,7 +137,7 @@ export const ButtonsContainerStyle = styled.div`
 
   @media only screen and (max-width: 600px) {
     .buttons {
-      width: 100px;
+      width: 150px;
       /* height: 250px; */
     }
     .close-btn {
@@ -161,5 +170,25 @@ export const ModelViewerStyle = styled.section`
     object-fit: contain;
     width: 100vw;
     height: 90vh;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  #viewer-container {
+    height: 100%;
+    width: 100%;
   }
 `;
