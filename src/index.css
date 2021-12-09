@@ -5,6 +5,11 @@
   --clr-selected-btn-bg: var(--clr-purple);
 }
 
+@font-face {
+  font-family: "vivaldif";
+  src: local("vivaldif"), url(./vivaldi/VIVALDII.TTF) format("truetype");
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",

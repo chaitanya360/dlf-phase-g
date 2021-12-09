@@ -2,7 +2,7 @@ import React from "react";
 import { HeaderStyle } from "./components.style";
 
 function Header(props) {
-  return <HeaderStyle>Independent Floors Phase G</HeaderStyle>;
+  return <HeaderStyle>Signature Residences</HeaderStyle>;
 }
 
 export default Header;

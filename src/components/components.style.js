@@ -6,13 +6,14 @@ export const HeaderStyle = styled.header`
   text-align: center;
   color: rgb(56, 55, 55);
   text-align: center;
-  font-size: 1.7rem;
-  font-weight: 500;
+  font-size: 2.5rem;
+  font-weight: 600;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.486);
   padding: 0.5rem 0;
+  font-family: "vivaldif";
 
   @media only screen and (max-width: 600px) {
-    font-size: 1rem;
+    font-size: 2rem;
     padding: 0.5rem;
   }
 `;
@@ -73,7 +74,7 @@ export const ButtonsContainerStyle = styled.div`
   text-align: center;
 
   @media only screen and (max-width: 600px) {
-    top: -10px;
+    top: 0px;
   }
 
   .close-btn {
@@ -151,7 +152,7 @@ export const ButtonsContainerStyle = styled.div`
     left: 0;
     margin-left: 0;
     ::before {
-      height: 65%;
+      height: 78%;
     }
   }
 `;
