@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: "vivaldif";
-  src: local("vivaldif"), url(./vivaldi/VIVALDII.TTF) format("truetype");
+  src: local("vivaldif"), url("./vivaldi/VIVALDII.TTF") format("truetype");
 }
 
 body {

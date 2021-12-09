@@ -10,7 +10,7 @@ export const HeaderStyle = styled.header`
   font-weight: 600;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.486);
   padding: 0.5rem 0;
-  font-family: "vivaldif";
+  font-family: vivaldif;
 
   @media only screen and (max-width: 600px) {
     font-size: 2rem;
