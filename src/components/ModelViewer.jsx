@@ -14,20 +14,26 @@ function ModelViewer({ selectedItem }) {
 
   const enterFullScreenMode = () => {
     if (isVirtualTour) {
+      let enteredFullScreen = false;
       let container = document.getElementById("viewer-container");
-      container
-        .requestFullscreen()
-        .then(function () {
-          // element has entered fullscreen mode successfully
-        })
-        .catch(function (error) {
-          // element could not enter fullscreen mode
-        });
+      if (container.requestFullscreen) {
+        container.requestFullscreen();
+        enteredFullScreen = true;
+      } else if (container.webkitRequestFullscreen) {
+        /* Safari */
+        container.webkitRequestFullscreen();
+        enteredFullScreen = true;
+      } else if (container.msRequestFullscreen) {
+        /* IE11 */
+        container.msRequestFullscreen();
+        enteredFullScreen = true;
+      }
 
-      container.addEventListener("fullscreenchange", () => {
-        if (document.fullscreenElement !== null) setFullScreen(true);
-        else setFullScreen(false);
-      });
+      if (enteredFullScreen)
+        container.addEventListener("fullscreenchange", () => {
+          if (document.fullscreenElement !== null) setFullScreen(true);
+          else setFullScreen(false);
+        });
     }
   };
 
