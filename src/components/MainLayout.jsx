@@ -49,9 +49,8 @@ const data = [
   {
     id: 8,
     title: "Virtual Tour",
+    // virtual tour link
     src: "https://btvrprojects.s3.ap-south-1.amazonaws.com/Vatika_seven+lamps-tour/index.htm",
-
-    // isTour is just for commit purpose will be deleted
     isTour: true,
   },
 ];
