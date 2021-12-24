@@ -50,7 +50,7 @@ const data = [
     id: 8,
     title: "Virtual Tour",
     // virtual tour link
-    src: "https://btvrprojects.s3.ap-south-1.amazonaws.com/Vatika_seven+lamps-tour/index.htm",
+    src: "https://btvrprojects.s3.ap-south-1.amazonaws.com/Dlf_3rd-F+%26+Un-f/index.htm",
     isTour: true,
   },
 ];
